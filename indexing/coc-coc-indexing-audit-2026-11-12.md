@@ -191,3 +191,29 @@ Người dùng cung cấp nội dung robots.txt với các quy tắc:
 ### Bước kiểm tra tiếp theo
 
 Mở và kiểm tra trực tiếp ba endpoint sitemap; đối chiếu mã HTTP, XML hợp lệ, số URL trong từng sitemap, URL trùng lặp và việc các sitemap con có nằm trong sitemap index của Yoast hay không. Không thay đổi robots.txt hoặc sitemap trước khi hoàn tất đối chiếu.
+
+
+## 9. Đối chiếu XML Sitemap Index gốc do người dùng cung cấp
+
+Ngày 2026-11-12, người dùng cung cấp nội dung XML của `https://realestateproject.vn/sitemap_index.xml`. Đã phân tích cấu trúc XML index (không phải nội dung các sitemap con).
+
+### Kết quả đọc từ XML index
+
+- Tổng số sitemap con được khai báo: **24**.
+- Sitemap nội dung: **11** — `post-sitemap.xml`, `post-sitemap2.xml`, `page-sitemap.xml`, `blocks-sitemap.xml`, `ban-va-cho-thue-sitemap.xml`, `can-ho-sitemap.xml`, `dat-nen-sitemap.xml`, `doanh-nhan-sitemap.xml`, `du-an-sitemap.xml`, `nghi-duong-sitemap.xml`, `tai-lieu-sitemap.xml`.
+- Sitemap taxonomy: **12** — `category-sitemap.xml`, `post_tag-sitemap.xml`, `danh-muc-bvct-sitemap.xml`, `danh-muc-can-ho-sitemap.xml`, `danh-muc-dat-nen-sitemap.xml`, `danh-muc-du-an-sitemap.xml`, `danh-muc-nghi-duong-sitemap.xml`, `danh-muc-tai-lieu-sitemap.xml`, `tag-bvct-sitemap.xml`, `tag-tai-lieu-sitemap.xml`, `tags-sitemap.xml`, `tag-page-sitemap.xml`.
+- Sitemap tác giả: **1** — `author-sitemap.xml`.
+
+### Nhận xét
+
+1. Sitemap index có cấu trúc sitemap chuẩn của Yoast: root `sitemapindex`, namespace Sitemaps.org, mỗi mục có `loc` và `lastmod`, kèm stylesheet XSL.
+2. Có hai tệp bài viết; cần tải từng tệp để đếm số URL, xem phân trang và đối chiếu trùng lặp.
+3. Nhóm CPT (bất động sản, căn hộ, mua bán/cho thuê, đất nền, nghỉ dưỡng, doanh nhân, tài liệu) đang được đưa vào sitemap. Cần đánh giá URL thực tế trong từng sitemap, không thể kết luận chỉ từ tên.
+4. Nhóm taxonomy có nhiều sitemap theo taxonomy chung và taxonomy riêng của CPT. Cần kiểm tra số lượng term, nội dung archive, canonical và noindex trước khi quyết định giữ hay loại.
+5. `blocks-sitemap.xml` cần kiểm tra xem các URL block có thực sự là trang công khai hữu ích cho tìm kiếm hay chỉ là thành phần dựng giao diện.
+6. `author-sitemap.xml` cần đánh giá trang tác giả có hồ sơ chuyên môn và giá trị biên tập hay không.
+7. XML index được cung cấp không cho biết tổng số URL trang/bài bên trong các sitemap con. Không suy diễn số URL từ số sitemap hoặc `lastmod`.
+
+### Giới hạn xác minh
+
+Đã đọc được nội dung XML index do người dùng cung cấp. Chưa có nội dung XML của 24 sitemap con nên chưa thể đếm tổng URL, phát hiện URL trùng, kiểm tra URL lỗi/noindex/redirect hoặc đối chiếu độ bao phủ giữa các nguồn sitemap.
