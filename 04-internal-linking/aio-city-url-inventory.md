@@ -102,3 +102,53 @@ Không xóa, hợp nhất, đổi URL hoặc thay nội dung khi chưa đánh gi
 2. Đọc sâu các URL cũ và ứng viên khu vực.
 3. Hoàn tất inventory toàn website.
 4. Lập mapping liên kết nội bộ và trình bày thay đổi dự kiến trước khi ghi lên WordPress.
+
+
+## 8. Kết quả tìm kiếm WordPress theo cụm “AIO City”
+
+WordPress Content Search trả về 43 bài viết thuộc post type bài viết khi tìm cụm “AIO City”. Đây là kết quả tìm kiếm toàn văn, nên có một số kết quả chỉ nhắc đến AIO CITY hoặc Bình Tân chứ không phải bài AIO CITY. Không xem 43 là số bài đủ điều kiện liên kết.
+
+### 23 URL lịch sử có nội dung trực tiếp về AIO CITY cần rà soát
+
+| ID | Tiêu đề | URL |
+|---:|---|---|
+| 24817 | Mặt bằng Shophouse Aio City Bình Tân | https://realestateproject.vn/tin-tuc/mat-bang-shophouse-aio-city-binh-tan-quy-hoach-nhu-the-nao-phan-tich-tiem-nang-dong-tien.html |
+| 3003 | Căn hộ Aio City lựa chọn an cư phù hợp tại Bình Tân | https://realestateproject.vn/tin-tuc/can-ho-aio-city-lua-chon-an-cu-phu-hop-tai-binh-tan.html |
+| 2976 | Dự án khu căn hộ Aio City trên đường Tên Lửa | https://realestateproject.vn/tin-tuc/du-an-khu-can-ho-chung-cu-aio-city-tren-duong-ten-lua-quan-binh-tan-khi-nao-trien-khai-tro-lai.html |
+| 2779 | Pháp lý AIO City Bình Tân | https://realestateproject.vn/tin-tuc/phap-ly-hoan-thien-nut-that-giup-gia-tang-suc-hut-cho-du-an-aio-city-binh-tan.html |
+| 2587 | Aio City ưu đãi dịp khai trương nhà mẫu | https://realestateproject.vn/tin-tuc/aio-city-uu-dai-hap-dan-dip-khai-truong-nha-mau.html |
+| 2594 | Tiến độ xây dựng dự án căn hộ Aio City Bình Tân | https://realestateproject.vn/tin-tuc/tien-do-xay-dung-du-an-can-ho-aio-city-binh-tan.html |
+| 2398 | Không gian sống của gia đình tôi trong căn hộ Aio City | https://realestateproject.vn/tin-tuc/khong-gian-song-cua-gia-dinh-toi-trong-can-ho-cua-du-an-aio-city-binh-tan.html |
+| 2404 | Vì sao căn hộ Aio City đáng sống tại khu Tây? | https://realestateproject.vn/tin-tuc/vi-sao-can-ho-aio-city-lai-tro-thanh-noi-dang-song-bac-nhat-tai-khu-tay.html |
+| 2421 | Pháp lý Aio City Bình Tân và thời hạn sở hữu | https://realestateproject.vn/tin-tuc/du-an-aio-city-binh-tan-phap-ly-thuoc-dat-y-te-se-so-huu-50-nam-hay-lau-dai-mua-co-on.html |
+| 1141 | Chương trình bán hàng Aio City tháng 8/2019 | https://realestateproject.vn/tin-tuc/chuong-trinh-ban-hang-aio-city-binh-tan-thang-8-nam-2019.html |
+| 1144 | Thông tin dự án Aio City Hoa Lâm tháng 6/2019 | https://realestateproject.vn/tin-tuc/thong-tin-du-an-aio-city-hoa-lam-moi-nhat-thang-6-nam-2019.html |
+| 1146 | Dự án căn hộ Aio City bên cạnh Aeon Bình Tân | https://realestateproject.vn/tin-tuc/du-an-can-ho-aio-city-ben-canh-aeon-binh-tan-co-gi-hap-dan.html |
+| 1149 | Kingdom 101 và dự án AIO CITY | https://realestateproject.vn/tin-tuc/kingdom-101-buoc-dem-cho-du-an-aio-city-binh-tan.html |
+| 1159 | Aio City Bình Tân trên đường Tên Lửa | https://realestateproject.vn/tin-tuc/aio-city-binh-tan-can-ho-cao-cap-tren-duong-ten-lua.html |
+| 1163 | AIO CITY Bình Tân – lựa chọn cuộc sống tiện nghi | https://realestateproject.vn/tin-tuc/aio-city-binh-tan-lua-chon-cho-cuoc-song-tien-nghi.html |
+| 1168 | Ai là chủ đầu tư dự án Aio City Bình Tân? | https://realestateproject.vn/tin-tuc/ai-la-chu-dau-tu-du-an-can-ho-aio-city-binh-tan.html |
+| 1118 | Aio City Bình Tân và tiện ích | https://realestateproject.vn/kien-truc/aio-city-binh-tan-hap-dan-khach-hang-bang-nhung-tien-ich-dang-cap.html |
+| 1123 | Thiết kế căn hộ dự án Aio City Bình Tân | https://realestateproject.vn/kien-truc/thiet-ke-can-ho-du-an-aio-city-binh-tan.html |
+| 1125 | Khách hàng Bình Tân quan tâm giá bán căn hộ Aio City | https://realestateproject.vn/tin-tuc/khach-hang-khu-vuc-binh-tan-quan-tam-gia-ban-can-ho-aio-city-binh-tan.html |
+| 1127 | Tiến độ xây dựng căn hộ Aio City Bình Tân tháng 12 | https://realestateproject.vn/tin-tuc/tien-do-xay-dung-can-ho-aio-city-binh-tan-thang-12.html |
+| 2377 | Dự án nhà ở D2 D3 cạnh Aeon Mall Bình Tân | https://realestateproject.vn/tin-tuc/tai-sao-nen-mua-du-an-nha-o-d2-d3-canh-sieu-thi-aeon-mall-binh-tan.html |
+| 2380 | Giá căn hộ Hoa Lâm D2 và D3 cạnh Aeon Bình Tân | https://realestateproject.vn/tin-tuc/loan-gia-ban-can-ho-hoa-lam-khu-nha-o-d2-va-d3-ben-canh-aeon-binh-tan.html |
+| 2328 | Central trúng thầu thi công tầng hầm dự án Hoa Lâm Shangri-La | https://realestateproject.vn/tin-tuc/central-trung-thau-thi-cong-tang-ham-du-an-can-ho-cao-cap-hoalam-shangri-la.html |
+
+### 5 kết quả tìm kiếm nhiễu cần loại khỏi cụm AIO CITY
+
+- ID 3079 – Giá bán Privia Khang Điền Bình Tân.
+- ID 3092 – Nhiều dự án căn hộ tại Bình Tân.
+- ID 22483 – Nội thất Lumiere Nguyễn Trãi.
+- ID 22392 – Thiết kế Lumiere Cao Xà Lá.
+- ID 3154 – Điều kiện mở bán chung cư.
+
+### Kết luận
+
+- 43 kết quả bài viết được tìm thấy theo cụm “AIO City”.
+- 15 bài PR mới đã xuất bản.
+- 23 bài cũ có nội dung trực tiếp về AIO CITY cần được đọc và phân loại sâu.
+- 5 kết quả nhiễu cần loại khỏi cụm AIO CITY hoặc đánh giá lại theo ngữ cảnh.
+- Chưa có nghĩa 23 bài cũ đều phù hợp để nhận link: một số bài có dữ liệu lịch sử, nội dung pháp lý nhạy cảm, giá bán cũ hoặc thông tin cần xác minh.
+- Chưa thực hiện chèn hoặc sửa liên kết trong WordPress.
