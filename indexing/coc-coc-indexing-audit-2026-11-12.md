@@ -83,3 +83,61 @@ Official documentation:
 ## Safety and change control
 
 This audit made no changes to WordPress, plugins, robots.txt, sitemap, content, or hosting configuration. Any proposed robots or sitemap change must be reviewed against existing Yoast directives, WP Robots Txt, Code Snippets, and WPCode configuration before approval.
+
+
+## Sitemap index inventory supplied by the site owner
+
+The site owner supplied the Yoast sitemap-index listing on 2026-11-12. It contains **24 sitemap entries**:
+
+### Content sitemaps (11)
+- `post-sitemap.xml` — last modified 2026-11-12 09:29 +00:00
+- `post-sitemap2.xml` — last modified 2026-11-12 09:29 +00:00
+- `page-sitemap.xml` — 2026-11-11 07:57 +00:00
+- `blocks-sitemap.xml` — 2026-10-31 08:54 +00:00
+- `ban-va-cho-thue-sitemap.xml` — 2026-07-30 16:34 +00:00
+- `can-ho-sitemap.xml` — 2026-11-11 07:50 +00:00
+- `dat-nen-sitemap.xml` — 2026-06-22 19:31 +00:00
+- `doanh-nhan-sitemap.xml` — 2026-04-13 18:23 +00:00
+- `du-an-sitemap.xml` — 2026-11-11 07:58 +00:00
+- `nghi-duong-sitemap.xml` — 2025-12-30 06:26 +00:00
+- `tai-lieu-sitemap.xml` — 2026-11-11 07:57 +00:00
+
+### Taxonomy sitemaps (12)
+- `category-sitemap.xml` — 2026-11-12 09:29 +00:00
+- `post_tag-sitemap.xml` — 2026-11-12 09:26 +00:00
+- `danh-muc-bvct-sitemap.xml` — 2026-07-30 16:34 +00:00
+- `danh-muc-can-ho-sitemap.xml` — 2026-03-13 14:15 +00:00
+- `danh-muc-dat-nen-sitemap.xml` — 2026-06-22 19:31 +00:00
+- `danh-muc-du-an-sitemap.xml` — 2026-11-11 07:58 +00:00
+- `danh-muc-nghi-duong-sitemap.xml` — 2025-12-30 06:26 +00:00
+- `danh-muc-tai-lieu-sitemap.xml` — 2026-11-11 07:57 +00:00
+- `tag-bvct-sitemap.xml` — 2026-07-30 16:34 +00:00
+- `tag-tai-lieu-sitemap.xml` — 2026-11-11 07:57 +00:00
+- `tags-sitemap.xml` — 2026-11-11 07:58 +00:00
+- `tag-page-sitemap.xml` — 2026-11-11 07:57 +00:00
+
+### Author sitemap (1)
+- `author-sitemap.xml` — 2026-09-16 04:39 +00:00
+
+## Sitemap inventory assessment
+
+1. The index covers the principal public content types seen in the WordPress REST inventory: posts, pages, projects, apartments, land, listings, resorts, business profiles, and documents.
+2. The two post sitemap files are consistent with Yoast splitting a large post collection. Their actual URL counts must be read from each XML file before confirming coverage.
+3. UX Blocks sitemap needs special review. Reusable layout blocks are usually not independent search landing pages; include them only if each URL is intentionally public, useful, canonical, and suitable for search. Otherwise review noindex/exclusion from sitemap.
+4. Taxonomy sitemap entries should not be submitted indiscriminately. Keep category/tag archives only when they have distinct search intent, useful introductions, curated content, and no substantial duplication. Thin or near-empty archives should be assessed for noindex/exclusion.
+5. Author archive should be reviewed for meaningful author biography, editorial expertise, and useful article listing. Do not assume it deserves indexing solely because it is in the sitemap.
+6. Older last-modified dates on some sitemap files are not evidence of an error or deindexing; they may simply indicate no recent content changes in those sections.
+7. Sitemap last-modified values are not crawl timestamps and do not confirm Cốc Cốc has fetched or indexed any URL.
+
+## Live XML verification status
+
+The supplied sitemap-index table is accepted as owner-provided evidence of the 24 listed entries. Attempts to fetch the sitemap index, robots.txt, and selected child sitemaps through the available web fetch returned inaccessible/cache-miss errors. Therefore the following remain unverified: HTTP status, XML validity, number of URLs per child sitemap, actual URL contents, canonical destinations, and URL coverage against WordPress.
+
+## Recommended Cốc Cốc submission priority (provisional)
+
+- **Priority 1:** Canonical project pages (`du-an`), high-value project support pages, useful public articles, and genuinely useful documents.
+- **Priority 2:** Other valuable public CPT entries and well-maintained category archives.
+- **Review before submission:** Tags, author archive, UX Blocks, thin taxonomy archives, legacy or outdated pages.
+- **Exclude from submission:** Noindex pages, redirects, 404/soft-404, duplicate/canonicalized URLs, private/internal pages, and low-value system/layout URLs.
+
+This is a prioritization recommendation only. No sitemap, robots, noindex, or WordPress settings were changed.
