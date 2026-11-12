@@ -141,3 +141,30 @@ The supplied sitemap-index table is accepted as owner-provided evidence of the 2
 - **Exclude from submission:** Noindex pages, redirects, 404/soft-404, duplicate/canonicalized URLs, private/internal pages, and low-value system/layout URLs.
 
 This is a prioritization recommendation only. No sitemap, robots, noindex, or WordPress settings were changed.
+
+
+## robots.txt content supplied by the site owner
+
+The owner pasted the following logical rules (the displayed labels are Vietnamese translations in the supplied text):
+
+- `coccocbot`: empty `Disallow` value.
+- Yoast wildcard group: `User-agent: *`, empty `Disallow`.
+- `coccocbot-web`: `Allow: /`.
+- General wildcard group: `Disallow: /wp-admin/`, `Allow: /wp-admin/admin-ajax.php`.
+- Sitemap declarations:
+  - `https://realestateproject.vn/wp-sitemap.xml`
+  - `https://realestateproject.vn/sitemap.xml`
+  - `https://realestateproject.vn/sitemap_index.xml` (appears twice)
+
+### robots.txt assessment
+
+1. If the raw file really contains standard English directives with these values, the explicit `coccocbot` group is not blocking paths (empty Disallow), and the `coccocbot-web` group explicitly allows `/`.
+2. The general wildcard rule blocks `/wp-admin/` and allows `/wp-admin/admin-ajax.php`, a common WordPress configuration.
+3. Robots group selection is user-agent-specific. Do not assume wildcard rules are merged into a matching specific group; verify the behavior against the crawler's exact user-agent token and Cốc Cốc documentation.
+4. Three sitemap locations are declared, and the Yoast sitemap index is declared twice. Repeated sitemap declarations are generally redundant, not proof of a crawl error. However, the site should choose a clearly maintained canonical sitemap index and verify whether the other two endpoints exist, overlap, redirect, or contain stale/duplicate URLs.
+5. **Translation warning:** the owner-pasted text displays translated directive labels such as `Tác nhân người dùng`, `Cấm`, `Cho phép`, and `Sơ đồ trang web`. Robots.txt syntax requires the literal standard directives `User-agent`, `Disallow`, `Allow`, and `Sitemap`. If these Vietnamese words are literally present in the raw file rather than being browser auto-translation, the file is malformed and must be corrected. Confirm the raw source with browser translation disabled or by viewing page source before making any change.
+6. No configuration was edited. Direct fetch attempts for robots.txt and all three sitemap endpoints failed in the available web fetch surface, so HTTP status and raw bytes remain unverified.
+
+### Provisional recommendation
+
+Keep the current access rules unchanged pending raw-file verification. If the raw syntax is valid, do not add more bot allow rules merely for duplication. Next, inspect all three sitemap endpoints and determine which one is the authoritative index. Prefer the Yoast `/sitemap_index.xml` only if it is live, valid XML and contains the intended canonical URL inventory. Do not remove `/wp-sitemap.xml` or `/sitemap.xml` until their behavior and dependencies are confirmed.
