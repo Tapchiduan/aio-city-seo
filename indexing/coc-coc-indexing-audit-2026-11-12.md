@@ -168,3 +168,26 @@ The owner pasted the following logical rules (the displayed labels are Vietnames
 ### Provisional recommendation
 
 Keep the current access rules unchanged pending raw-file verification. If the raw syntax is valid, do not add more bot allow rules merely for duplication. Next, inspect all three sitemap endpoints and determine which one is the authoritative index. Prefer the Yoast `/sitemap_index.xml` only if it is live, valid XML and contains the intended canonical URL inventory. Do not remove `/wp-sitemap.xml` or `/sitemap.xml` until their behavior and dependencies are confirmed.
+
+
+## 8. Đánh giá robots.txt theo nội dung người dùng cung cấp (2026-11-12)
+
+Người dùng cung cấp nội dung robots.txt với các quy tắc:
+- `User-agent: coccocbot` và `Disallow:` để trống.
+- Khối Yoast có `User-agent: *` và `Disallow:` để trống.
+- `User-agent: coccocbot-web` với `Allow: /`.
+- Khối `User-agent: *` chặn `/wp-admin/`, đồng thời cho phép `/wp-admin/admin-ajax.php`.
+- Khai báo ba sitemap: `/wp-sitemap.xml`, `/sitemap.xml`, `/sitemap_index.xml` (sitemap_index được khai báo lặp lại).
+
+### Kết luận
+
+- Theo nội dung được cung cấp, không có quy tắc Disallow áp dụng trực tiếp để chặn nội dung công khai của website đối với `coccocbot` hoặc `coccocbot-web`.
+- Quy tắc chặn `/wp-admin/` là thông lệ hợp lý; ngoại lệ `admin-ajax.php` được cho phép.
+- Chưa có căn cứ để yêu cầu mở rộng `Allow: /` cho mọi user-agent; không nên thay đổi cấu hình chỉ vì mục đích “cho phép tất cả”.
+- Ba sitemap được khai báo không đồng nghĩa cả ba URL đều tồn tại, trả về XML hợp lệ hoặc chứa các URL khác nhau. Cần kiểm tra trực tiếp mã phản hồi HTTP, nội dung XML, canonical sitemap index và mức độ trùng lặp trước khi quyết định giữ/bỏ khai báo nào.
+- `sitemap_index.xml` xuất hiện hai lần trong robots.txt. Việc lặp khai báo thường không tạo thêm giá trị khám phá; có thể tinh gọn sau khi xác minh các sitemap, nhưng hiện tại không chỉnh sửa theo yêu cầu chỉ kiểm tra.
+- Đây là đánh giá dựa trên văn bản robots.txt người dùng dán, chưa phải xác minh độc lập nội dung đang được máy chủ phân phối tại thời điểm kiểm tra.
+
+### Bước kiểm tra tiếp theo
+
+Mở và kiểm tra trực tiếp ba endpoint sitemap; đối chiếu mã HTTP, XML hợp lệ, số URL trong từng sitemap, URL trùng lặp và việc các sitemap con có nằm trong sitemap index của Yoast hay không. Không thay đổi robots.txt hoặc sitemap trước khi hoàn tất đối chiếu.
